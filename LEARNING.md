@@ -85,36 +85,40 @@
     "babel-loader": "8.1.0"
   },
   "devDependencies": {
-    "@mswjs/data": "^0.3.0",
-    "@storybook/addon-actions": "^6.3.2",
-    "@storybook/addon-essentials": "^6.3.2",
-    "@storybook/addon-links": "^6.3.2",
-    "@storybook/node-logger": "^6.3.2",
-    "@storybook/preset-create-react-app": "^3.1.7",
-    "@storybook/react": "^6.3.2",
-    "@testing-library/cypress": "^7.0.6",
-    "@testing-library/react-hooks": "^7.0.0",
-    "@types/dompurify": "^2.2.2",
-    "@types/faker": "^5.5.7",
-    "@types/jsonwebtoken": "^8.5.1",
-    "@types/lodash": "^4.14.170",
-    "@types/marked": "^2.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "autoprefixer": "^9",
+    "@mswjs/data": "^0.3.0",                                # mock data library - relational models
+                                                            # storybook - developing and testing components in isolation
+    "@storybook/addon-actions": "^6.3.2",                   #   display data received by event handlers
+    "@storybook/addon-essentials": "^6.3.2",                #   extended functionality
+    "@storybook/addon-links": "^6.3.2",                     #   navigate between stories
+    "@storybook/node-logger": "^6.3.2",                     #   npmlog loggin utility
+    "@storybook/preset-create-react-app": "^3.1.7",         #   CRA integration
+    "@storybook/react": "^6.3.2",                           #   React integration
+                                                            # testing-library - unit testing made easy
+    "@testing-library/cypress": "^7.0.6",                   #   cypress integration
+    "@testing-library/react-hooks": "^7.0.0",               #   hooks testing made easy
+                                                            # typescript types
+    "@types/dompurify": "^2.2.2",                           #   dompurify
+    "@types/faker": "^5.5.7",                               #   faker
+    "@types/jsonwebtoken": "^8.5.1",                        #   jsonwebtoken
+    "@types/lodash": "^4.14.170",                           #   lodash
+    "@types/marked": "^2.0.3",                              #   marked
+    "@typescript-eslint/eslint-plugin": "^4.25.0",          #   eslint-plugin
+    "@typescript-eslint/parser": "^4.25.0",                 #   parser
+    "autoprefixer": "^9",                                   # css prefix util
     "cross-env": "^7.0.3",
     "cypress": "^7.6.0",                                    # Very much like Playwrite and unit testing framework
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
-    "eslint-plugin-cypress": "^2.11.3",
-    "eslint-plugin-import": "^2.23.4",
+                                                            # eslint
+    "eslint-config-prettier": "^8.3.0",                     #   prettier configuration
+    "eslint-import-resolver-typescript": "^2.4.0",          #   typescript type import assistance
+    "eslint-plugin-cypress": "^2.11.3",                     #   cypress integration
+    "eslint-plugin-import": "^2.23.4",                      #
     "eslint-plugin-jest-dom": "^3.9.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-testing-library": "^4.6.0",
-    "faker": "^5.5.3",
+    "faker": "^5.5.3",                                      # generate massive amounts of fake data in the browser and node.js
     "husky": "^6.0.0",
     "is-ci": "^3.0.0",
     "is-ci-cli": "^2.2.0",
