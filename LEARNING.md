@@ -111,17 +111,17 @@
     "eslint-config-prettier": "^8.3.0",                     #   prettier configuration
     "eslint-import-resolver-typescript": "^2.4.0",          #   typescript type import assistance
     "eslint-plugin-cypress": "^2.11.3",                     #   cypress integration
-    "eslint-plugin-import": "^2.23.4",                      #
-    "eslint-plugin-jest-dom": "^3.9.0",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-testing-library": "^4.6.0",
+    "eslint-plugin-import": "^2.23.4",                      #   plugin import - enhaced linting
+    "eslint-plugin-jest-dom": "^3.9.0",                     #   jest integration
+    "eslint-plugin-jsx-a11y": "^6.4.1",                     #   assessibility
+    "eslint-plugin-prettier": "^3.4.0",                     #   prettier
+    "eslint-plugin-react": "^7.24.0",                       #   react integration
+    "eslint-plugin-react-hooks": "^4.2.0",                  #   react hooks integration
+    "eslint-plugin-testing-library": "^4.6.0",              #   testing-library integration
     "faker": "^5.5.3",                                      # generate massive amounts of fake data in the browser and node.js
-    "husky": "^6.0.0",
-    "is-ci": "^3.0.0",
-    "is-ci-cli": "^2.2.0",
+    "husky": "^6.0.0",                                      # executing git hooks - lint code before it is committed
+    "is-ci": "^3.0.0",                                      # checks if current environment is a continual integration server
+    "is-ci-cli": "^2.2.0",                                  # is-ci 
     "lint-staged": "^11.0.0",
     "msw": "^0.29.0",
     "npm-run-all": "^4.1.5",
