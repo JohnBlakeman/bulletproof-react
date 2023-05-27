@@ -105,7 +105,7 @@
     "@typescript-eslint/eslint-plugin": "^4.25.0",          #   eslint-plugin
     "@typescript-eslint/parser": "^4.25.0",                 #   parser
     "autoprefixer": "^9",                                   # css prefix util
-    "cross-env": "^7.0.3",
+    "cross-env": "^7.0.3",                                  # corss platform environment variables (windows, linux and mac)
     "cypress": "^7.6.0",                                    # Very much like Playwrite and unit testing framework
                                                             # eslint
     "eslint-config-prettier": "^8.3.0",                     #   prettier configuration
@@ -121,17 +121,17 @@
     "faker": "^5.5.3",                                      # generate massive amounts of fake data in the browser and node.js
     "husky": "^6.0.0",                                      # executing git hooks - lint code before it is committed
     "is-ci": "^3.0.0",                                      # checks if current environment is a continual integration server
-    "is-ci-cli": "^2.2.0",                                  # is-ci 
-    "lint-staged": "^11.0.0",
-    "msw": "^0.29.0",
-    "npm-run-all": "^4.1.5",
-    "plop": "^2.7.4",
-    "postcss": "^7",
-    "prettier": "^2.3.0",
-    "react-test-renderer": "^17.0.2",
-    "serve": "^12.0.0",
-    "start-server-and-test": "^1.12.5",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "is-ci-cli": "^2.2.0",                                  #   run different cli script when continual integration environment
+    "lint-staged": "^11.0.0",                               # lint check staged git files - stops you from committing rubbish
+    "msw": "^0.29.0",                                       # mock service worker - rest / graphql api mocking library
+    "npm-run-all": "^4.1.5",                                # run multiple npm scripts in parallel or sequential
+    "plop": "^2.7.4",                                       # prompt based component / template generator
+    "postcss": "^7",                                        # css linter and task automation
+    "prettier": "^2.3.0",                                   # opinionated code formatter, it enforces a consistent style by parsing your code
+    "react-test-renderer": "^17.0.2",                       # render react component to a dom object for unit testing purposes
+    "serve": "^12.0.0",                                     # http server / deamon
+    "start-server-and-test": "^1.12.5",                     # http server for testing with cypress
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",      # builds css using shortcuts
     "tsconfig-paths-webpack-plugin": "^3.5.1"
   },
   "msw": {
