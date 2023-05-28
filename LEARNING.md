@@ -42,25 +42,29 @@
     "zustand": "^3.5.2"                             # state management - obtains state via hooks transiently without causing renders
   },
   "scripts": {
-    "start": "craco start",
-    "start:cli": "cross-env BROWSER=none craco start",
-    "build": "craco build",
-    "test": "is-ci \"test:coverage\" \"test:jest\"",
-    "test:jest": "craco test",
-    "test:coverage": "CI=1 yarn test:jest -- --coverage",
-    "postinstall": "husky install",
-    "cy:install": "cypress install",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
-    "test:e2e:dev": "start-server-and-test start:cli http://localhost:3000 cy:open",
-    "pretest:e2e:run": "yarn build",
-    "test:e2e:run": "start-server-and-test serve http://localhost:3000 cy:run",
-    "test:e2e": "is-ci \"test:e2e:run\" \"test:e2e:dev\"",
-    "serve": "serve --no-clipboard --single --listen 3000 build",
-    "eject": "react-scripts eject",
-    "lint": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",
-    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
-    "format": "npm run prettier -- --write",
+    "start": "craco start",                                                                 # start with craco CRA configuration
+    "start:cli": "cross-env BROWSER=none craco start",                                      # start with cross platform configuration
+    "build": "craco build",                                                                 # build with craco CRA configuration
+    "test": "is-ci \"test:coverage\" \"test:jest\"",                                        # running test in continual integration environment (coverage) or locally (jest)
+    "test:jest": "craco test",                                                              # run test using craco CRA configuration
+    "test:coverage": "CI=1 yarn test:jest -- --coverage",                                   # run test in continual integration environment
+    "postinstall": "husky install",                                                         # install husky after npm / yarn install command
+    "cy:install": "cypress install",                                                        # install cypress
+    "cy:run": "cypress run",                                                                # run cypress
+    "cy:open": "cypress open",                                                              # run cypress and pass in parameters
+    "test:e2e:dev": "start-server-and-test start:cli http://localhost:3000 cy:open",        # end to end dev environment headed testing
+                                                                                            #   launch test server
+                                                                                            #   start with cross platform configuration
+                                                                                            #   start with craco CRA
+                                                                                            #   start cypress end to end testing
+    "pretest:e2e:run": "yarn build",                                                        # build project before running end to end test
+    "test:e2e:run": "start-server-and-test serve http://localhost:3000 cy:run",             # end to end test headless testing
+    "test:e2e": "is-ci \"test:e2e:run\" \"test:e2e:dev\"",                                  # run tests depending if in continual integration environment
+    "serve": "serve --no-clipboard --single --listen 3000 build",                           # start with serve http deamon
+    "eject": "react-scripts eject",                                                         # eject CRA features
+    "lint": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",               # lint project
+    "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",     # prettify code in all project files of given types
+    "format": "npm run prettier -- --write",                                                # prettify code ... ?
     "check-types": "tsc --project tsconfig.json --pretty --noEmit",
     "check-format": "npm run prettier -- --list-different",
     "validate-and-build": "npm-run-all --parallel check-types check-format lint build",
