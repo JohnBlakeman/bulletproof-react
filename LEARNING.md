@@ -64,14 +64,14 @@
     "eject": "react-scripts eject",                                                         # eject CRA features
     "lint": "eslint --fix --ext .js,.ts,.tsx ./src --ignore-path .gitignore",               # lint project
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",     # prettify code in all project files of given types
-    "format": "npm run prettier -- --write",                                                # prettify code ... ?
-    "check-types": "tsc --project tsconfig.json --pretty --noEmit",
-    "check-format": "npm run prettier -- --list-different",
-    "validate-and-build": "npm-run-all --parallel check-types check-format lint build",
-    "validate": "npm-run-all --parallel check-types && lint-staged",
-    "generate": "plop",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "format": "npm run prettier -- --write",                                                # run prettify command using npm, then pass in arguments after -- to prettier script
+    "check-types": "tsc --project tsconfig.json --pretty --noEmit",                         # typescript check compile errors, --noEmit stops compile (leave that to webpack?)
+    "check-format": "npm run prettier -- --list-different",                                 # output code files that violate prettier rules and return failed
+    "validate-and-build": "npm-run-all --parallel check-types check-format lint build",     # parallel run validation and build scripts: typescript, prettier, lint and build
+    "validate": "npm-run-all --parallel check-types && lint-staged",                        # parallel run validation, git stage changes and lint before commit
+    "generate": "plop",                                                                     # enter plop menu - to select what template to run
+    "storybook": "start-storybook -p 6006 -s public",                                       # run storybook server
+    "build-storybook": "build-storybook -s public"                                          # build storybook cache before running
   },
   "browserslist": {
     "production": [
